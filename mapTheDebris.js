@@ -48,11 +48,10 @@ function orbitalPeriod(arr) {
     return element;
   };
   
-
-  for (var i = 0; i < arr.length; i++) {
-    // loop through arguments, pushing orbital periods for each.
-    orbitalArr.push(orbitalPeriod(arr[i]));
-  }
+  // loop through arguments, pushing orbital periods for each element.
+  arr.forEach(function(e) {
+    orbitalArr.push(orbitalPeriod(e));
+  });
   
   
   return orbitalArr;
